@@ -1,0 +1,24 @@
+{
+    "search.exclude": {
+        "./node_modules": true,
+        "**/*.code-search": false,
+        "**/bower_components": false,
+        "**/node_modules": false
+    },
+    "search.maintainFileSearchCache": true,
+    "files.exclude": {
+        "./node_modules": true,
+        "**/.hg": false,
+        "**/.svn": false,
+        "**/CVS": false
+    },
+    "files.watcherExclude": {
+        "**/.git": true,
+        "**/.git/objects/**": false,
+        "**/.git/subtree-cache/**": false,
+        "**/.hg/store/**": false,
+        "**/node_modules": true,
+        "**/node_modules/**": false
+    },
+    "eslint.format.enable": true
+}

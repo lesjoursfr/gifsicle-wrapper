@@ -1,23 +1,21 @@
-const {promisify} = require('util');
-const fs = require('fs');
-const path = require('path');
-const isGif = require('is-gif');
-const test = require('ava');
-const imageminGifsicle = require('.');
+const fs = require("fs");
+const path = require("path");
+const isGif = require("is-gif");
+const test = require("ava");
+const gifsicle = require(".");
 
-const readFile = promisify(fs.readFile);
+test("Resize", async t => {
+	await gifsicle(path.join(__dirname, "test.gif"))
+		.resize(600, 600, { kernel: gifsicle.kernel.lanczos3, withoutEnlargement: true })
+		.toFile(path.join(__dirname, "test-resized.gif"));
 
-test('Buffer', async t => {
-	const buf = await readFile(path.join(__dirname, 'fixture.gif'));
-	const data = await imageminGifsicle()(buf);
-
-	t.true(data.length < buf.length);
-	t.true(isGif(data));
+	t.true(isGif(fs.readFileSync(path.join(__dirname, "test-resized.gif"))));
 });
 
-test('Buffer - non-binary', async t => {
-	const buf = Buffer.from('string');
-	const data = await imageminGifsicle()(buf);
+test("Greyscale", async t => {
+	await gifsicle(path.join(__dirname, "test.gif"))
+		.greyscale(true)
+		.toFile(path.join(__dirname, "test-greyscale.gif"));
 
-	t.is(data.toString(), 'string');
+	t.true(isGif(fs.readFileSync(path.join(__dirname, "test-greyscale.gif"))));
 });
