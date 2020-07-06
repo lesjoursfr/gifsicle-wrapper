@@ -1,4 +1,4 @@
-# imagemin-gifsicle [![Build Status](https://travis-ci.org/imagemin/imagemin-gifsicle.svg?branch=master)](https://travis-ci.org/imagemin/imagemin-gifsicle)
+# gifsicle-wrapper [![Build Status](https://travis-ci.org/lesjoursfr/gifsicle-wrapper.svg?branch=master)](https://travis-ci.org/lesjoursfr/gifsicle-wrapper)
 
 > [Gifsicle](https://www.lcdf.org/gifsicle/) wrapper
 
