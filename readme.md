@@ -1,69 +1,33 @@
 # imagemin-gifsicle [![Build Status](https://travis-ci.org/imagemin/imagemin-gifsicle.svg?branch=master)](https://travis-ci.org/imagemin/imagemin-gifsicle)
 
-> Imagemin plugin for [Gifsicle](https://www.lcdf.org/gifsicle/)
+> [Gifsicle](https://www.lcdf.org/gifsicle/) wrapper
 
 ## Install
 
 ```
-$ npm install imagemin-gifsicle
+$ npm install gifsicle-wrapper
 ```
 
 ## Usage
 
+Resize a Gif :
 ```js
-const imagemin = require('imagemin');
-const imageminGifsicle = require('imagemin-gifsicle');
+const Gifsicle = require('gifsicle-wrapper');
 
 (async () => {
-	await imagemin(['images/*.gif'], {
-		destination: 'build/images',
-		plugins: [
-			imageminGifsicle()
-		]
-	});
-
-	console.log('Images optimized');
+	await Gifsicle(path.join(__dirname, "test.gif"))
+		.resize(600, 600, { kernel: gifsicle.kernel.lanczos3, withoutEnlargement: true })
+		.toFile(path.join(__dirname, "test-resized.gif"));
 })();
 ```
 
-## API
+Change colors to greyscale :
+```js
+const Gifsicle = require('gifsicle-wrapper');
 
-### imageminGifsicle(options?)(buffer)
-
-Returns a `Promise<Buffer>` with the optimized image.
-
-#### options
-
-Type: `object`
-
-##### interlaced
-
-Type: `boolean`\
-Default: `false`
-
-Interlace gif for progressive rendering.
-
-##### optimizationLevel
-
-Type: `number`\
-Default: `1`
-
-Select an optimization level between `1` and `3`.
-
-> The optimization level determines how much optimization is done; higher levels take longer, but may have better results.
-
-1. Stores only the changed portion of each image.
-2. Also uses transparency to shrink the file further.
-3. Try several optimization methods (usually slower, sometimes better results)
-
-##### colors
-
-Type: `number`
-
-Reduce the number of distinct colors in each output GIF to num or less. Num must be between 2 and 256.
-
-#### buffer
-
-Type: `Buffer`
-
-Buffer to optimize.
+(async () => {
+	await Gifsicle(path.join(__dirname, "test.gif"))
+		.greyscale(true)
+		.toFile(path.join(__dirname, "test-resized.gif"));
+})();
+```
