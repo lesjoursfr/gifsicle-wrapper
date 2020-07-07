@@ -3,7 +3,11 @@
 	"version": "0.1.0",
 	"description": "Wrapper for Gifsicle",
 	"license": "MIT",
-	"repository": "lesjours/gifsicle-wrapper",
+	"repository": "lesjoursfr/gifsicle-wrapper",
+	"homepage": "https://github.com/lesjoursfr/gifsicle-wrapper#readme",
+	"bugs": {
+		"url": "https://github.com/lesjoursfr/gifsicle-wrapper/issues"
+	},
 	"engines": {
 		"node": ">=12"
 	},
