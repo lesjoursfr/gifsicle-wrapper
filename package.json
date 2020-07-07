@@ -15,7 +15,7 @@
 		"test": "ava"
 	},
 	"files": [
-		"index.js"
+		"index.js", "lib/**/*"
 	],
 	"keywords": [
 		"gif",
