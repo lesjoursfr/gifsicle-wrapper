@@ -30,7 +30,8 @@
 	"dependencies": {
 		"execa": "^4.0.2",
 		"gifsicle": "^5.1.0",
-		"is-gif": "^3.0.0"
+		"is-gif": "^3.0.0",
+		"image-size": "^0.8.3"
 	},
 	"devDependencies": {
 		"ava": "^3.10.0"
