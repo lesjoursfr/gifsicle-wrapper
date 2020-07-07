@@ -1,6 +1,6 @@
 {
 	"name": "gifsicle-wrapper",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"description": "Wrapper for Gifsicle",
 	"license": "MIT",
 	"repository": "lesjoursfr/gifsicle-wrapper",
@@ -28,13 +28,13 @@
 		"optimize"
 	],
 	"dependencies": {
-		"eslint": "7.4.0",
 		"execa": "^4.0.2",
 		"gifsicle": "^5.1.0",
 		"image-size": "^0.8.3",
 		"is-gif": "^3.0.0"
 	},
 	"devDependencies": {
-		"ava": "^3.10.0"
+		"ava": "^3.10.0",
+		"eslint": "7.4.0"
 	}
 }
