@@ -1,28 +1,32 @@
-# gifsicle-wrapper [![Build Status](https://travis-ci.org/lesjoursfr/gifsicle-wrapper.svg?branch=master)](https://travis-ci.org/lesjoursfr/gifsicle-wrapper)
+[![NPM version](https://badge.fury.io/js/gifsicle-wrapper.svg)](http://badge.fury.io/js/gifsicle-wrapper)
+[![Build Status](https://travis-ci.org/lesjoursfr/gifsicle-wrapper.svg?branch=master)](https://travis-ci.org/lesjoursfr/gifsicle-wrapper)
 
-> [Gifsicle](https://www.lcdf.org/gifsicle/) wrapper
+gifsicle-wrapper
+================
+[Gifsicle](https://www.lcdf.org/gifsicle/) wrapper
 
-## Install
 
-```
-$ npm install gifsicle-wrapper
-```
 
 ## Usage
 
 Resize a Gif :
-```js
+
+```javascript
 const Gifsicle = require('gifsicle-wrapper');
 
 (async () => {
 	await Gifsicle(path.join(__dirname, "test.gif"))
-		.resize(600, 600, { kernel: gifsicle.kernel.lanczos3, withoutEnlargement: true })
+		.resize(600, 600, {
+			kernel: gifsicle.kernel.lanczos3,
+			withoutEnlargement: true
+		})
 		.toFile(path.join(__dirname, "test-resized.gif"));
 })();
 ```
 
 Change colors to greyscale :
-```js
+
+```javascript
 const Gifsicle = require('gifsicle-wrapper');
 
 (async () => {
