@@ -1,7 +1,36 @@
-os:
-  - linux
-  - windows
-language: node_js
-node_js:
-  - '14'
-  - '12'
+language: "node_js"
+jobs:
+  include:
+    - stage: "Test the project"
+      name: "Test the project on Linux with NodeJS 12"
+      os: "linux"
+      node_js: "12"
+      script: npm run test
+    - stage: "Test the project"
+      name: "Test the project on Linux with NodeJS 14"
+      os: "linux"
+      node_js: "14"
+      script: npm run test
+    - stage: "Test the project"
+      name: "Test the project on Windows with NodeJS 12"
+      os: "windows"
+      node_js: "12"
+      script: npm run test
+    - stage: "Test the project"
+      name: "Test the project on Windows with NodeJS 14"
+      os: "windows"
+      node_js: "14"
+      script: npm run test
+    - stage: "Release to NPM"
+      name: "Publish the package to the npmjs repository"
+      os: "linux"
+      node_js: "14"
+      deploy:
+        provider: "npm"
+        email: "npmjs@eraud.dev"
+        api_key:
+          secure: "u+Q1ppb+0D9JJ/gWy/BZAt+vhWVNSs4TuNSdrRJ2u0fj/yfODvMM7bZui9JOJ7wu6lWLRqvJbnEXaazoJARkmct/G5pB6Q9b/rOuW3lr5k3HUgkTpY2cTC9BUh3ce/gjOqFYsuZRfbIBlXjbX5Y/1qLCUuBI+D2o9AbhK80asnSVmg4K6a7H57vBpKDFrlcr+XeHkh5ygfwGQKbeYW4u7M88jILPEDp+523vHcgjpFie5gpDpvdPB4AoiLuqpfuyStzLn2ynMmXw3OkM3eiVNMMcGDugipDt63wRZSjetH6GQRTHOEzN66ieG7SgnfUMdd2wJtwt89sWbA5kbUNhEISrmuAUOEYeQb+ePjXWdwRgWt6+Pi9UAc3KEYq2168y7AmD3K05UBJF1Amur4CcK/fI3bstaALF6wQ5bmhqXD1DiXJ3n0qUIG3NwYyvgg6HS9f/NIlnhxNq3D9ygQuE6HJqkrCjZqSmoFWUASyTugLOCUm2RXHm024+4hEKu5bcDyfuIOlUJLu8b2FGmeUtkqROaY5pU+UHwgx8cYXwwmjebIqukGvHrHryBdLNQI+QG5HvM1Izzo22YJI5nYhJWQpdMffTs7583kLcRGwdvX+xuBRhjlEpi2v/g/0g4ozaKDy8gWm5rhe3lGNxHAgWZqoRwkiT+ttahYKzIsiTtZQ="
+        on:
+          tags: "true"
+          repo: "lesjoursfr/gifsicle-wrapper"
+        cleanup: "true"
