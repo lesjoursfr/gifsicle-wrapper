@@ -1,20 +1,17 @@
+version: ~> 1.0
 language: node_js
+branches:
+  only:
+  - master
+os: linux
+dist: focal
 jobs:
   include:
   - stage: Test the project
-    name: Test the project on Linux with NodeJS 12
-    os: linux
-    node_js: '12'
-    script: npm run test
-  - stage: Test the project
     name: Test the project on Linux with NodeJS 14
     os: linux
+    dist: focal
     node_js: '14'
-    script: npm run test
-  - stage: Test the project
-    name: Test the project on Windows with NodeJS 12
-    os: windows
-    node_js: '12'
     script: npm run test
   - stage: Test the project
     name: Test the project on Windows with NodeJS 14
@@ -24,12 +21,13 @@ jobs:
   - stage: Release to NPM
     name: Publish the package to the npmjs repository
     os: linux
+    dist: focal
     node_js: '14'
     deploy:
       edge: true
       provider: npm
       email: npmjs@eraud.dev
-      api_key:
+      api_token:
         secure: j4GBxJZgD2MkUYHGDvZgw4tcS6qSq3zxs3kFXrVUjyKLuHEIt2BwT0N/k9vDMFjuUAkeHqYk7eMDrxUcm5j6Qp4gxnwkuWMCa9MsBHyaRnoCmwUbwPJmi/pW6pGWGg2mxXPpx473Ww3YetXI484dlEYuyoIiq93t041GWrujZ73dlR+XwaWr0smbiY9gcSTIm7SHRevlpQgU4fhPdts2HNGKs5rkW4dMpF0EODqkLq0mkPz40Io9QB3Y3kU+2MAkTigFmcVCQOzY7/nL1mgCES4LdZVX3DO7fh22b8UmyQng6GwC6qmxsLyLYI4yxfl7FjJbbUrc99uwc2wGNvNbuXYIYsqsXgXoDuhp4QG+GUonQxyxRUFY7A+85cnURLm1Z/URMhjg2nA9854w7+sQNm+D5vDODwPZe/7fQAAEClX4rKEPTI0F00QzoU4zxgFkdbYPPamUo1yUzXGB824QriMsgWRS2hbl8ZupSw9giLY37sRKtxaR8+8iIL5m3kiyCGb1hPG0qsQJKy0eimxbxn1ZLf07fBMJ/D1NZP0F/C8ZCUMLvHxm8HwuwPZubcMLjT7AfuY9BUoGOYPEsO2wrmpUaDMUrMGCCzChT2f270n5nx/6/XQC7Dnat+wzPl4v4mBrjPMZ1d//0rmjkH4gWBPEJsej9sgwEcQAUaskgRs=
       on:
         tags: true
