@@ -29,7 +29,7 @@
 		"optimize"
 	],
 	"dependencies": {
-		"execa": "^5.0.0",
+		"execa": "^5.0.1",
 		"gifsicle": "^5.2.0",
 		"image-size": "^1.0.0",
 		"is-gif": "^3.0.0"
