@@ -35,3 +35,15 @@ const Gifsicle = require('gifsicle-wrapper');
 		.toFile(path.join(__dirname, "test-resized.gif"));
 })();
 ```
+
+Optimize the output :
+
+```javascript
+const Gifsicle = require('gifsicle-wrapper');
+
+(async () => {
+	await Gifsicle(path.join(__dirname, "test.gif"))
+		.optimize({ level: gifsicle.level.O2, lossiness: 20 })
+		.toFile(path.join(__dirname, "test-optimized.gif"));
+})();
+```

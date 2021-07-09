@@ -44,3 +44,35 @@ test("Output as a Buffer", async t => {
 
 	t.true(isGif(fs.readFileSync(path.join(__dirname, "test-buffer.gif"))));
 });
+
+test("O2 Compression", async t => {
+	await gifsicle(path.join(__dirname, "test.gif"))
+		.optimize({ level: gifsicle.level.O2 })
+		.toFile(path.join(__dirname, "test-o2.gif"));
+
+	t.true(isGif(fs.readFileSync(path.join(__dirname, "test-o2.gif"))));
+});
+
+test("O3 Compression", async t => {
+	await gifsicle(path.join(__dirname, "test.gif"))
+		.optimize({ level: gifsicle.level.O3 })
+		.toFile(path.join(__dirname, "test-o3.gif"));
+
+	t.true(isGif(fs.readFileSync(path.join(__dirname, "test-o3.gif"))));
+});
+
+test("Lossiness 20", async t => {
+	await gifsicle(path.join(__dirname, "test.gif"))
+		.optimize({ lossiness: 20 })
+		.toFile(path.join(__dirname, "test-lossiness-20.gif"));
+
+	t.true(isGif(fs.readFileSync(path.join(__dirname, "test-lossiness-20.gif"))));
+});
+
+test("Lossiness 120", async t => {
+	await gifsicle(path.join(__dirname, "test.gif"))
+		.optimize({ lossiness: 120 })
+		.toFile(path.join(__dirname, "test-lossiness-120.gif"));
+
+	t.true(isGif(fs.readFileSync(path.join(__dirname, "test-lossiness-120.gif"))));
+});
