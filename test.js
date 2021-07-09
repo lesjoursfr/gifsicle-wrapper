@@ -35,3 +35,12 @@ test("Greyscale", async t => {
 
 	t.true(isGif(fs.readFileSync(path.join(__dirname, "test-greyscale.gif"))));
 });
+
+test("Output as a Buffer", async t => {
+	let output = await gifsicle(path.join(__dirname, "test.gif"))
+		.resize(600, 600, { kernel: gifsicle.kernel.lanczos3, withoutEnlargement: true })
+		.toBuffer();
+	fs.writeFileSync(path.join(__dirname, "test-buffer.gif"), output);
+
+	t.true(isGif(fs.readFileSync(path.join(__dirname, "test-buffer.gif"))));
+});
