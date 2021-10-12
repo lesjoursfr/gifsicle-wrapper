@@ -9,7 +9,7 @@
 		"url": "https://github.com/lesjoursfr/gifsicle-wrapper/issues"
 	},
 	"engines": {
-		"node": ">=12"
+		"node": ">=v14.18.0"
 	},
 	"scripts": {
 		"test": "ava"
@@ -32,10 +32,15 @@
 		"execa": "^5.1.1",
 		"gifsicle": "^5.2.0",
 		"image-size": "^1.0.0",
-		"is-gif": "^3.0.0"
+		"is-gif": "^4.0.1"
 	},
 	"devDependencies": {
 		"ava": "^3.15.0",
-		"eslint": "^7.32.0"
-	}
+		"eslint": "^7.32.0",
+		"eslint-config-standard": "^16.0.3",
+		"eslint-plugin-import": "^2.25.1",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-promise": "^5.1.0"
+	},
+	"packageManager": "yarn@3.0.2"
 }
