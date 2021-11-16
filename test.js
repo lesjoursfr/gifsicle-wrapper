@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const isGif = require('is-gif');
+const isGif = require('./lib/toolbox/is-gif');
 const test = require('ava');
-const gifsicle = require('.');
+const gifsicle = require('./index');
 
 test('Resize (withoutEnlargement: true)', async t => {
   await gifsicle(path.join(__dirname, 'test.gif'))
