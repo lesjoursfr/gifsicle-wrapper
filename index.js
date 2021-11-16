@@ -1,8 +1,14 @@
-const Gifsicle = require('./lib/constructor');
-require('./lib/input')(Gifsicle);
-require('./lib/color')(Gifsicle);
-require('./lib/resize')(Gifsicle);
-require('./lib/optimize')(Gifsicle);
-require('./lib/output')(Gifsicle);
+import Gifsicle from './lib/constructor.js';
+import addColorFunctions from './lib/color.js';
+import addInputFunctions from './lib/input.js';
+import addOptimizeFunctions from './lib/optimize.js';
+import addOutputFunctions from './lib/output.js';
+import addResizeFunctions from './lib/resize.js';
 
-module.exports = Gifsicle;
+addInputFunctions(Gifsicle);
+addColorFunctions(Gifsicle);
+addResizeFunctions(Gifsicle);
+addOptimizeFunctions(Gifsicle);
+addOutputFunctions(Gifsicle);
+
+export default Gifsicle;
