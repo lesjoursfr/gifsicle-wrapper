@@ -26,7 +26,8 @@ jobs:
       on:
         tags: true
         repo: lesjoursfr/gifsicle-wrapper
-      cleanup: true
+        branch: stable
+      cleanup: false
 notifications:
   slack:
     secure: Nw6gkP0wj/VrxXjR9qnYiCYfCK0IgK7AMIKqSJN8zdFVgC5qFL8apRSWXQN83ge4QTfGw4NDNN9rcN1/6y2lRGjN3++K9jbaFx7uJr5oG5/vXgBRt5YlTHpiokH4vHpuCtlLcfVEoo3+O464r+KXqh63KpylxL8FSXuBm3/igGL/3WoCbukt/w1sjJZLNFjn+bkayjOjvMM3PQXSsHX7U4OvQFaRUNhn3GDOhSqcFE88sbw4F4ptXx5t5zg5dSKmnoKtBVm+WmUwUvMo/FNEOJautqj4LAJW+Die0jcHm10hlTMTrX6htFLblo0oIt8rUqH8t1ab/U+YFoAQabI8XlwYMjwioi994QN+h9m2ZLUoPDjS5WlKKFPvUiMtwn1JKvF5U+bLx4EkcdIHjWayIbjwno6u4TBpbHNAMMch84YO+hLmCbsfxknCn0jc/gpdFi/5ZFZCTQjfEOMHZscRRYqEFX/DJNZBmwvnVQtayeNzUkoZzl1J+7r3WI6o/I3VlVJmk6HRpcuk9/hJDC0sHHJeTYEmRWvwDUD9+tJdnGqKV5h7NfurYYy3Iz1WVpipps+CRD4aHxVLfKLygGleFMHduqNESMfUf7LI3xIPtQGJD6yEZjzqYxo95PZn08bel5onhL/5s+2ozdrpqOxyplm4/orF0fYIBD67wAxvpeY=
