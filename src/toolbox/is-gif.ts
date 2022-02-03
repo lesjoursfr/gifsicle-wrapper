@@ -1,6 +1,6 @@
 // Based on isGif function from https://github.com/sindresorhus/is-gif
 // https://github.com/sindresorhus/is-gif/blob/main/index.js
-export default function isGif (buffer) {
+export function isGif (buffer : Buffer) {
   if (!buffer || buffer.length < 3) {
     return false;
   }

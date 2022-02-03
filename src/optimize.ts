@@ -1,36 +1,42 @@
+import { Gifsicle } from './gifsicle.js';
+
 /**
  * Optimization levels.
- * @member
- * @private
  */
-const level = {
-  O1: 'O1',
-  O2: 'O2',
-  O3: 'O3'
+/* eslint-disable no-unused-vars */
+export enum OptimizationLevel {
+  O1 = 'O1',
+  O2 = 'O2',
+  O3 = 'O3'
 };
+/* eslint-enable no-unused-vars */
+
+/**
+ * Optimization options.
+ */
+export type OptimizeOptions = {
+  level?: OptimizationLevel;
+  lossiness?: number;
+}
 
 /**
  * Optimize the gif.
  *
  * @param {Object} [options]
- * @param {String} [options.level='1'] - the optimization level.
+ * @param {OptimizationLevel} [options.level=OptimizationLevel.O1] - the optimization level.
  * @param {Number} [options.lossiness=20] - the lossiness value to shrink the number of colors [0,200].
  * @returns {Gifsicle}
  * @throws {TypeError} Invalid parameters
  */
-function optimize (options) {
+export function optimize (this: Gifsicle, options: OptimizeOptions | undefined): Gifsicle {
   // Default options
-  this.options.optimize = { level: level.O1, lossiness: 20 };
+  this.options.optimize = { level: OptimizationLevel.O1, lossiness: 20 };
 
   // Process parameters
   if (options !== undefined) {
     // Level
     if (options.level !== undefined) {
-      if (typeof level[options.level] === 'string') {
-        this.options.optimize.level = level[options.level];
-      } else {
-        throw new TypeError("Expected 'options.level' to be a valid optimization level");
-      }
+      this.options.optimize.level = options.level;
     }
     // Lossiness
     if (options.lossiness !== undefined) {
@@ -43,14 +49,3 @@ function optimize (options) {
   }
   return this;
 }
-
-/**
- * Decorate the Gifsicle prototype with output-related functions.
- * @private
- */
-export default function addOptimizeFunctions (Gifsicle) {
-  Object.assign(Gifsicle.prototype, {
-    optimize
-  });
-  Gifsicle.level = level;
-};
