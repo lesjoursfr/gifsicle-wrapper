@@ -7,7 +7,7 @@ import { Gifsicle } from './gifsicle.js';
  * @returns {Gifsicle}
  * @throws {TypeError} Invalid parameters
  */
-export function greyscale (this: Gifsicle, greyscale: boolean | undefined) : Gifsicle {
+export function greyscale (this: Gifsicle, greyscale: boolean | undefined): Gifsicle {
   if (greyscale !== undefined) {
     this.options.greyscale = greyscale;
   } else {

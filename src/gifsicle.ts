@@ -27,7 +27,7 @@ export class Gifsicle {
     public grayscale = grayscale;
     public resize = resize;
     public crop = crop;
-    public optimize = optimize
+    public optimize = optimize;
     public toFile = toFile;
     public toBuffer = toBuffer;
 }

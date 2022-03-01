@@ -12,7 +12,7 @@ export enum ReductionKernel {
   mitchell = 'mitchell',
   lanczos2 = 'lanczos2',
   lanczos3 = 'lanczos3'
-};
+}
 /* eslint-enable no-unused-vars */
 
 /**
@@ -29,7 +29,7 @@ export enum CroppingPosition {
   bottomRight = 'bottomRight',
   bottomLeft = 'bottomLeft',
   topLeft = 'topLeft'
-};
+}
 /* eslint-enable no-unused-vars */
 
 /**
@@ -38,14 +38,14 @@ export enum CroppingPosition {
 export type ResizeOptions = {
   kernel: ReductionKernel | undefined;
   withoutEnlargement: boolean | undefined;
-}
+};
 
 /**
  * Cropping options.
  */
 export type CroppingOptions = {
   position: CroppingPosition | undefined;
-}
+};
 
 /**
  * Resize image to `width`, `height` or `width x height`.
@@ -58,7 +58,7 @@ export type CroppingOptions = {
  * @returns {Gifsicle}
  * @throws {TypeError} Invalid parameters
  */
-export function resize (this: Gifsicle, width : number | undefined, height: number | undefined, options: ResizeOptions | undefined): Gifsicle {
+export function resize (this: Gifsicle, width: number | undefined, height: number | undefined, options: ResizeOptions | undefined): Gifsicle {
   // Default options
   this.options.resize = { kernel: ReductionKernel.lanczos3, withoutEnlargement: false };
 
@@ -100,7 +100,7 @@ export function resize (this: Gifsicle, width : number | undefined, height: numb
  * @returns {Gifsicle}
  * @throws {TypeError} Invalid parameters
  */
-export function crop (this: Gifsicle, width : number, height: number, options: CroppingOptions | undefined): Gifsicle {
+export function crop (this: Gifsicle, width: number, height: number, options: CroppingOptions | undefined): Gifsicle {
   // Default options
   this.options.crop = { width: 0, height: 0, position: CroppingPosition.center };
 
@@ -124,7 +124,7 @@ export function crop (this: Gifsicle, width : number, height: number, options: C
   return this;
 }
 
-export function computeCroppingPoint (input: Buffer, crop: { width: number, height: number; position: CroppingPosition }) : { x: number, y: number } {
+export function computeCroppingPoint (input: Buffer, crop: { width: number, height: number; position: CroppingPosition }): { x: number, y: number } {
   const size = sizeOf(input);
   if (size.width === undefined || size.height === undefined) {
     throw new Error("Can't compute the image size");
