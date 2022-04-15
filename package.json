@@ -44,12 +44,12 @@
 	"devDependencies": {
 		"@tsconfig/node16": "^1.0.2",
 		"@types/gifsicle": "^5.2.0",
-		"@typescript-eslint/eslint-plugin": "^5.15.0",
-		"@typescript-eslint/parser": "^5.15.0",
-		"ava": "^4.1.0",
-		"eslint": "^8.11.0",
+		"@typescript-eslint/eslint-plugin": "^5.19.0",
+		"@typescript-eslint/parser": "^5.19.0",
+		"ava": "^4.2.0",
+		"eslint": "^8.13.0",
 		"ts-node": "^10.7.0",
-		"typescript": "^4.6.2"
+		"typescript": "^4.6.3"
 	},
 	"ava": {
 		"extensions": {
