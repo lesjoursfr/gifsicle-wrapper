@@ -39,7 +39,7 @@
 	"type": "module",
 	"dependencies": {
 		"execa": "^6.1.0",
-		"gifsicle": "^6.1.0",
+		"gifsicle": "^7.0.1",
 		"image-size": "^1.0.1"
 	},
 	"devDependencies": {
