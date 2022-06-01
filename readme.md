@@ -28,7 +28,9 @@ Change colors to greyscale :
 const Gifsicle = require("gifsicle-wrapper");
 
 (async () => {
-	await Gifsicle(path.join(__dirname, "test.gif")).greyscale(true).toFile(path.join(__dirname, "test-resized.gif"));
+	await Gifsicle(path.join(__dirname, "test.gif"))
+		.greyscale(true)
+		.toFile(path.join(__dirname, "test-resized.gif"));
 })();
 ```
 
