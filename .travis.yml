@@ -5,29 +5,29 @@ dist: focal
 if: branch = "stable" OR tag IS present
 jobs:
   include:
-  - stage: Test the project
-    name: Test the project on Linux with NodeJS 16
-    os: linux
-    dist: focal
-    node_js: '16'
-    script: npm run build && npm run test
-  - stage: Release to NPM
-    name: Publish the package to the npmjs repository
-    os: linux
-    dist: focal
-    node_js: '16'
-    script: npm run build
-    deploy:
-      edge: true
-      provider: npm
-      email: npmjs@eraud.dev
-      api_token:
-        secure: j4GBxJZgD2MkUYHGDvZgw4tcS6qSq3zxs3kFXrVUjyKLuHEIt2BwT0N/k9vDMFjuUAkeHqYk7eMDrxUcm5j6Qp4gxnwkuWMCa9MsBHyaRnoCmwUbwPJmi/pW6pGWGg2mxXPpx473Ww3YetXI484dlEYuyoIiq93t041GWrujZ73dlR+XwaWr0smbiY9gcSTIm7SHRevlpQgU4fhPdts2HNGKs5rkW4dMpF0EODqkLq0mkPz40Io9QB3Y3kU+2MAkTigFmcVCQOzY7/nL1mgCES4LdZVX3DO7fh22b8UmyQng6GwC6qmxsLyLYI4yxfl7FjJbbUrc99uwc2wGNvNbuXYIYsqsXgXoDuhp4QG+GUonQxyxRUFY7A+85cnURLm1Z/URMhjg2nA9854w7+sQNm+D5vDODwPZe/7fQAAEClX4rKEPTI0F00QzoU4zxgFkdbYPPamUo1yUzXGB824QriMsgWRS2hbl8ZupSw9giLY37sRKtxaR8+8iIL5m3kiyCGb1hPG0qsQJKy0eimxbxn1ZLf07fBMJ/D1NZP0F/C8ZCUMLvHxm8HwuwPZubcMLjT7AfuY9BUoGOYPEsO2wrmpUaDMUrMGCCzChT2f270n5nx/6/XQC7Dnat+wzPl4v4mBrjPMZ1d//0rmjkH4gWBPEJsej9sgwEcQAUaskgRs=
-      on:
-        tags: true
-        repo: lesjoursfr/gifsicle-wrapper
-        branch: stable
-      cleanup: false
+    - stage: Test the project
+      name: Test the project on Linux with NodeJS 16
+      os: linux
+      dist: focal
+      node_js: "16"
+      script: npm run build && npm run test
+    - stage: Release to NPM
+      name: Publish the package to the npmjs repository
+      os: linux
+      dist: focal
+      node_js: "16"
+      script: npm run build
+      deploy:
+        edge: true
+        provider: npm
+        email: npmjs@eraud.dev
+        api_token:
+          secure: j4GBxJZgD2MkUYHGDvZgw4tcS6qSq3zxs3kFXrVUjyKLuHEIt2BwT0N/k9vDMFjuUAkeHqYk7eMDrxUcm5j6Qp4gxnwkuWMCa9MsBHyaRnoCmwUbwPJmi/pW6pGWGg2mxXPpx473Ww3YetXI484dlEYuyoIiq93t041GWrujZ73dlR+XwaWr0smbiY9gcSTIm7SHRevlpQgU4fhPdts2HNGKs5rkW4dMpF0EODqkLq0mkPz40Io9QB3Y3kU+2MAkTigFmcVCQOzY7/nL1mgCES4LdZVX3DO7fh22b8UmyQng6GwC6qmxsLyLYI4yxfl7FjJbbUrc99uwc2wGNvNbuXYIYsqsXgXoDuhp4QG+GUonQxyxRUFY7A+85cnURLm1Z/URMhjg2nA9854w7+sQNm+D5vDODwPZe/7fQAAEClX4rKEPTI0F00QzoU4zxgFkdbYPPamUo1yUzXGB824QriMsgWRS2hbl8ZupSw9giLY37sRKtxaR8+8iIL5m3kiyCGb1hPG0qsQJKy0eimxbxn1ZLf07fBMJ/D1NZP0F/C8ZCUMLvHxm8HwuwPZubcMLjT7AfuY9BUoGOYPEsO2wrmpUaDMUrMGCCzChT2f270n5nx/6/XQC7Dnat+wzPl4v4mBrjPMZ1d//0rmjkH4gWBPEJsej9sgwEcQAUaskgRs=
+        on:
+          tags: true
+          repo: lesjoursfr/gifsicle-wrapper
+          branch: stable
+        cleanup: false
 notifications:
   slack:
     secure: Nw6gkP0wj/VrxXjR9qnYiCYfCK0IgK7AMIKqSJN8zdFVgC5qFL8apRSWXQN83ge4QTfGw4NDNN9rcN1/6y2lRGjN3++K9jbaFx7uJr5oG5/vXgBRt5YlTHpiokH4vHpuCtlLcfVEoo3+O464r+KXqh63KpylxL8FSXuBm3/igGL/3WoCbukt/w1sjJZLNFjn+bkayjOjvMM3PQXSsHX7U4OvQFaRUNhn3GDOhSqcFE88sbw4F4ptXx5t5zg5dSKmnoKtBVm+WmUwUvMo/FNEOJautqj4LAJW+Die0jcHm10hlTMTrX6htFLblo0oIt8rUqH8t1ab/U+YFoAQabI8XlwYMjwioi994QN+h9m2ZLUoPDjS5WlKKFPvUiMtwn1JKvF5U+bLx4EkcdIHjWayIbjwno6u4TBpbHNAMMch84YO+hLmCbsfxknCn0jc/gpdFi/5ZFZCTQjfEOMHZscRRYqEFX/DJNZBmwvnVQtayeNzUkoZzl1J+7r3WI6o/I3VlVJmk6HRpcuk9/hJDC0sHHJeTYEmRWvwDUD9+tJdnGqKV5h7NfurYYy3Iz1WVpipps+CRD4aHxVLfKLygGleFMHduqNESMfUf7LI3xIPtQGJD6yEZjzqYxo95PZn08bel5onhL/5s+2ozdrpqOxyplm4/orF0fYIBD67wAxvpeY=
