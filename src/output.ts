@@ -1,14 +1,14 @@
-import { execa } from 'execa';
-import { writeFileSync } from 'fs';
-import gifsicle from 'gifsicle';
-import { Gifsicle, GifsicleInternalOptions } from './gifsicle.js';
-import { computeCroppingPoint } from './resize.js';
+import { execa } from "execa";
+import { writeFileSync } from "fs";
+import gifsicle from "gifsicle";
+import { Gifsicle, GifsicleInternalOptions } from "./gifsicle.js";
+import { computeCroppingPoint } from "./resize.js";
 
-async function processFile (input: Buffer, options: GifsicleInternalOptions) {
-  const args = ['--no-warnings', '--no-app-extensions'];
+async function processFile(input: Buffer, options: GifsicleInternalOptions) {
+  const args = ["--no-warnings", "--no-app-extensions"];
 
   if (options.greyscale === true) {
-    args.push('--use-colormap=gray');
+    args.push("--use-colormap=gray");
   }
 
   if (options.crop !== undefined) {
@@ -19,9 +19,9 @@ async function processFile (input: Buffer, options: GifsicleInternalOptions) {
   if (options.resize !== undefined) {
     if (options.resize.width !== undefined || options.resize.height !== undefined) {
       if (options.resize.withoutEnlargement === true) {
-        args.push(`--resize-fit=${options.resize.width || '_'}x${options.resize.height || '_'}`);
+        args.push(`--resize-fit=${options.resize.width || "_"}x${options.resize.height || "_"}`);
       } else {
-        args.push(`--resize-touch=${options.resize.width || '_'}x${options.resize.height || '_'}`);
+        args.push(`--resize-touch=${options.resize.width || "_"}x${options.resize.height || "_"}`);
       }
     }
   }
@@ -37,7 +37,7 @@ async function processFile (input: Buffer, options: GifsicleInternalOptions) {
 
   const { stdout } = await execa(gifsicle, args, {
     encoding: null,
-    input
+    input,
   });
 
   return stdout;
@@ -48,7 +48,7 @@ async function processFile (input: Buffer, options: GifsicleInternalOptions) {
  *
  * @param {String} [fileOut]
  */
-export async function toFile (this: Gifsicle, fileOut: string) {
+export async function toFile(this: Gifsicle, fileOut: string) {
   writeFileSync(fileOut, await processFile(this.input, this.options));
 }
 
@@ -57,6 +57,6 @@ export async function toFile (this: Gifsicle, fileOut: string) {
  *
  * @returns {Buffer}
  */
-export async function toBuffer (this: Gifsicle) {
+export async function toBuffer(this: Gifsicle) {
   return processFile(this.input, this.options);
 }

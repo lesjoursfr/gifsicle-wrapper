@@ -1,17 +1,17 @@
-import sizeOf from 'image-size';
-import { Gifsicle } from './gifsicle.js';
+import sizeOf from "image-size";
+import { Gifsicle } from "./gifsicle.js";
 
 /**
  * Reduction kernels.
  */
 /* eslint-disable no-unused-vars */
 export enum ReductionKernel {
-  sample = 'sample',
-  mix = 'mix',
-  catrom = 'catrom',
-  mitchell = 'mitchell',
-  lanczos2 = 'lanczos2',
-  lanczos3 = 'lanczos3'
+  sample = "sample",
+  mix = "mix",
+  catrom = "catrom",
+  mitchell = "mitchell",
+  lanczos2 = "lanczos2",
+  lanczos3 = "lanczos3",
 }
 /* eslint-enable no-unused-vars */
 
@@ -20,15 +20,15 @@ export enum ReductionKernel {
  */
 /* eslint-disable no-unused-vars */
 export enum CroppingPosition {
-  center = 'center',
-  top = 'top',
-  right = 'right',
-  bottom = 'bottom',
-  left = 'left',
-  topRight = 'topRight',
-  bottomRight = 'bottomRight',
-  bottomLeft = 'bottomLeft',
-  topLeft = 'topLeft'
+  center = "center",
+  top = "top",
+  right = "right",
+  bottom = "bottom",
+  left = "left",
+  topRight = "topRight",
+  bottomRight = "bottomRight",
+  bottomLeft = "bottomLeft",
+  topLeft = "topLeft",
 }
 /* eslint-enable no-unused-vars */
 
@@ -58,7 +58,12 @@ export type CroppingOptions = {
  * @returns {Gifsicle}
  * @throws {TypeError} Invalid parameters
  */
-export function resize (this: Gifsicle, width: number | undefined, height: number | undefined, options: ResizeOptions | undefined): Gifsicle {
+export function resize(
+  this: Gifsicle,
+  width: number | undefined,
+  height: number | undefined,
+  options: ResizeOptions | undefined
+): Gifsicle {
   // Default options
   this.options.resize = { kernel: ReductionKernel.lanczos3, withoutEnlargement: false };
 
@@ -100,7 +105,7 @@ export function resize (this: Gifsicle, width: number | undefined, height: numbe
  * @returns {Gifsicle}
  * @throws {TypeError} Invalid parameters
  */
-export function crop (this: Gifsicle, width: number, height: number, options: CroppingOptions | undefined): Gifsicle {
+export function crop(this: Gifsicle, width: number, height: number, options: CroppingOptions | undefined): Gifsicle {
   // Default options
   this.options.crop = { width: 0, height: 0, position: CroppingPosition.center };
 
@@ -124,13 +129,17 @@ export function crop (this: Gifsicle, width: number, height: number, options: Cr
   return this;
 }
 
-export function computeCroppingPoint (input: Buffer, crop: { width: number, height: number; position: CroppingPosition }): { x: number, y: number } {
+export function computeCroppingPoint(
+  input: Buffer,
+  crop: { width: number; height: number; position: CroppingPosition }
+): { x: number; y: number } {
   const size = sizeOf(input);
   if (size.width === undefined || size.height === undefined) {
     throw new Error("Can't compute the image size");
   }
 
-  let px = 0; let py = 0;
+  let px = 0;
+  let py = 0;
   switch (crop.position) {
     case CroppingPosition.center:
       px = Math.floor((size.width - crop.width) / 2);

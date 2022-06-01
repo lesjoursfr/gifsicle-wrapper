@@ -1,4 +1,4 @@
-import { Gifsicle } from './gifsicle.js';
+import { Gifsicle } from "./gifsicle.js";
 
 /**
  * Convert to 8-bit greyscale.
@@ -7,7 +7,7 @@ import { Gifsicle } from './gifsicle.js';
  * @returns {Gifsicle}
  * @throws {TypeError} Invalid parameters
  */
-export function greyscale (this: Gifsicle, greyscale: boolean | undefined): Gifsicle {
+export function greyscale(this: Gifsicle, greyscale: boolean | undefined): Gifsicle {
   if (greyscale !== undefined) {
     this.options.greyscale = greyscale;
   } else {
@@ -23,6 +23,6 @@ export function greyscale (this: Gifsicle, greyscale: boolean | undefined): Gifs
  * @returns {Gifsicle}
  * @throws {TypeError} Invalid parameters
  */
-export function grayscale (this: Gifsicle, grayscale: boolean | undefined) {
+export function grayscale(this: Gifsicle, grayscale: boolean | undefined) {
   return this.greyscale(grayscale);
 }

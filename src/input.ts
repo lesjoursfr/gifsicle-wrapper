@@ -1,8 +1,8 @@
-import { readFileSync } from 'fs';
-import { isGif } from './toolbox/is-gif.js';
+import { readFileSync } from "fs";
+import { isGif } from "./toolbox/is-gif.js";
 
-export function readFile (input: string | Buffer): Buffer {
-  if (typeof input === 'string') {
+export function readFile(input: string | Buffer): Buffer {
+  if (typeof input === "string") {
     input = readFileSync(input);
   }
 

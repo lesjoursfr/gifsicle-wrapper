@@ -1,13 +1,13 @@
-import { Gifsicle } from './gifsicle.js';
+import { Gifsicle } from "./gifsicle.js";
 
 /**
  * Optimization levels.
  */
 /* eslint-disable no-unused-vars */
 export enum OptimizationLevel {
-  O1 = 'O1',
-  O2 = 'O2',
-  O3 = 'O3'
+  O1 = "O1",
+  O2 = "O2",
+  O3 = "O3",
 }
 /* eslint-enable no-unused-vars */
 
@@ -28,7 +28,7 @@ export type OptimizeOptions = {
  * @returns {Gifsicle}
  * @throws {TypeError} Invalid parameters
  */
-export function optimize (this: Gifsicle, options: OptimizeOptions | undefined): Gifsicle {
+export function optimize(this: Gifsicle, options: OptimizeOptions | undefined): Gifsicle {
   // Default options
   this.options.optimize = { level: OptimizationLevel.O1, lossiness: 20 };
 
