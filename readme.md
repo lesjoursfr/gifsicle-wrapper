@@ -1,5 +1,5 @@
 [![NPM version](https://badge.fury.io/js/gifsicle-wrapper.svg)](http://badge.fury.io/js/gifsicle-wrapper)
-[![Build Status](https://travis-ci.org/lesjoursfr/gifsicle-wrapper.svg?branch=master)](https://travis-ci.org/lesjoursfr/gifsicle-wrapper)
+[![QC Checks](https://github.com/lesjoursfr/gifsicle-wrapper/actions/workflows/quality-control.yml/badge.svg)](https://github.com/lesjoursfr/gifsicle-wrapper/actions/workflows/quality-control.yml)
 
 # gifsicle-wrapper
 
