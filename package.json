@@ -49,10 +49,10 @@
 	"devDependencies": {
 		"@tsconfig/node16": "^1.0.3",
 		"@types/gifsicle": "^5.2.0",
-		"@typescript-eslint/eslint-plugin": "^5.38.1",
-		"@typescript-eslint/parser": "^5.38.1",
+		"@typescript-eslint/eslint-plugin": "^5.41.0",
+		"@typescript-eslint/parser": "^5.41.0",
 		"ava": "^5.0.1",
-		"eslint": "^8.24.0",
+		"eslint": "^8.26.0",
 		"eslint-config-prettier": "^8.5.0",
 		"prettier": "^2.7.1",
 		"ts-node": "^10.9.1",
@@ -66,5 +66,5 @@
 			"--loader=ts-node/esm"
 		]
 	},
-	"packageManager": "yarn@3.2.3"
+	"packageManager": "yarn@3.2.4"
 }
