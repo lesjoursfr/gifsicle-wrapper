@@ -49,8 +49,8 @@
 	"devDependencies": {
 		"@tsconfig/node16": "^1.0.3",
 		"@types/gifsicle": "^5.2.0",
-		"@typescript-eslint/eslint-plugin": "^5.53.0",
-		"@typescript-eslint/parser": "^5.53.0",
+		"@typescript-eslint/eslint-plugin": "^5.54.0",
+		"@typescript-eslint/parser": "^5.54.0",
 		"ava": "^5.2.0",
 		"eslint": "^8.35.0",
 		"eslint-config-prettier": "^8.6.0",
