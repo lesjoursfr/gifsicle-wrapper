@@ -42,7 +42,7 @@
 	],
 	"type": "module",
 	"dependencies": {
-		"execa": "^6.1.0",
+		"execa": "^7.0.0",
 		"gifsicle": "^7.0.1",
 		"image-size": "^1.0.2"
 	},
