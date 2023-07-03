@@ -47,7 +47,7 @@
 		"image-size": "^1.0.2"
 	},
 	"devDependencies": {
-		"@tsconfig/node16": "^1.0.4",
+		"@tsconfig/node16": "^16.1.0",
 		"@types/gifsicle": "^5.2.0",
 		"@typescript-eslint/eslint-plugin": "^5.60.1",
 		"@typescript-eslint/parser": "^5.60.1",
