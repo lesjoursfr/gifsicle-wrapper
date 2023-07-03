@@ -12,7 +12,7 @@
 		"access": "public"
 	},
 	"engines": {
-		"node": ">=16.15.1 || >=18.4.0"
+		"node": "18.x || 20.x"
 	},
 	"exports": "./lib/index.js",
 	"types": "./lib/index.d.ts",
@@ -28,7 +28,7 @@
 		"lint": "eslint . --fix --ext .js,.jsx,.ts,.tsx",
 		"format": "prettier --write .",
 		"build": "tsc",
-		"test": "ava"
+		"test": "NODE_OPTIONS='--loader=ts-node/esm' ava"
 	},
 	"keywords": [
 		"gif",
@@ -47,12 +47,12 @@
 		"image-size": "^1.0.2"
 	},
 	"devDependencies": {
-		"@tsconfig/node16": "^16.1.0",
+		"@tsconfig/node18": "^18.2.0",
 		"@types/gifsicle": "^5.2.0",
 		"@typescript-eslint/eslint-plugin": "^5.60.1",
 		"@typescript-eslint/parser": "^5.60.1",
 		"ava": "^5.3.1",
-		"eslint": "^8.43.0",
+		"eslint": "^8.44.0",
 		"eslint-config-prettier": "^8.8.0",
 		"prettier": "^2.8.8",
 		"ts-node": "^10.9.1",
@@ -66,5 +66,5 @@
 			"--loader=ts-node/esm"
 		]
 	},
-	"packageManager": "yarn@3.6.0"
+	"packageManager": "yarn@3.6.1"
 }
