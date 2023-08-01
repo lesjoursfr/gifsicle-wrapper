@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   printWidth: 120,
   trailingComma: "es5",
   overrides: [
@@ -10,3 +10,5 @@ module.exports = {
     },
   ],
 };
+
+export default config;
