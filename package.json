@@ -49,8 +49,8 @@
 	"devDependencies": {
 		"@tsconfig/node18": "^18.2.0",
 		"@types/gifsicle": "^5.2.0",
-		"@typescript-eslint/eslint-plugin": "^6.2.0",
-		"@typescript-eslint/parser": "^6.2.0",
+		"@typescript-eslint/eslint-plugin": "^6.2.1",
+		"@typescript-eslint/parser": "^6.2.1",
 		"ava": "^5.3.1",
 		"eslint": "^8.46.0",
 		"eslint-config-prettier": "^8.9.0",
