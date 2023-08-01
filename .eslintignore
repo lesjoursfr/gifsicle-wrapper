@@ -1,5 +1,9 @@
 # Generated files
 lib
+install
+
+# Vendor files
+vendor
 
 # Tests files
 *.gif
