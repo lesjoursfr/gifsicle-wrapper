@@ -7,7 +7,6 @@ vendor
 
 # Tests files
 *.gif
-!test.gif
 
 # Yarn & node.js dependencies
 package.json
