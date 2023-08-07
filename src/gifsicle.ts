@@ -1,8 +1,8 @@
-import { grayscale, greyscale } from "./color.js";
-import { readFile } from "./input.js";
-import { optimize, OptimizeOptions } from "./optimize.js";
-import { toBuffer, toFile } from "./output.js";
-import { crop, CroppingPosition, ReductionKernel, resize } from "./resize.js";
+import { grayscale, greyscale } from "./core/color.js";
+import { readFile } from "./core/input.js";
+import { OptimizeOptions, optimize } from "./core/optimize.js";
+import { toBuffer, toFile } from "./core/output.js";
+import { CroppingPosition, ReductionKernel, crop, resize } from "./core/resize.js";
 
 export interface GifsicleInternalOptions {
   greyscale?: boolean;

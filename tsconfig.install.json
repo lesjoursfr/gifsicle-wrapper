@@ -1,0 +1,10 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		/* Visit https://aka.ms/tsconfig.json to read more about this file */
+		"outDir": "install",
+		"declaration": false,
+		"declarationDir": null
+	},
+	"include": ["src/install.ts", "src/@types/**/*"]
+}

@@ -1,4 +1,4 @@
-import { Gifsicle } from "./gifsicle.js";
+import { Gifsicle } from "../gifsicle.js";
 
 /**
  * Optimization levels.

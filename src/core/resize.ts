@@ -1,5 +1,5 @@
 import sizeOf from "image-size";
-import { Gifsicle } from "./gifsicle.js";
+import { Gifsicle } from "../gifsicle.js";
 
 /**
  * Reduction kernels.

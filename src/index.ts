@@ -1,6 +1,6 @@
+import { OptimizationLevel } from "./core/optimize.js";
+import { CroppingPosition, ReductionKernel } from "./core/resize.js";
 import { Gifsicle } from "./gifsicle.js";
-import { OptimizationLevel } from "./optimize.js";
-import { CroppingPosition, ReductionKernel } from "./resize.js";
 
 function gifsicle(input: string | Buffer): Gifsicle {
   return new Gifsicle(input);

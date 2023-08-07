@@ -22,13 +22,15 @@
 	],
 	"scripts": {
 		"freshlock": "rm -rf node_modules/ && rm .yarn/install-state.gz && rm -r .yarn/cache/ && rm yarn.lock && yarn",
+		"postinstall": "node install/install.js",
 		"check-lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-		"check-format": "prettier --check .",
+		"check-format": "prettier --check \"**/*.{ts,js,cjs,mjs,json,yml,md}\"",
 		"check-tsc": "tsc --noEmit",
 		"lint": "eslint . --fix --ext .js,.jsx,.ts,.tsx",
-		"format": "prettier --write .",
+		"format": "prettier --write \"**/*.{ts,js,cjs,mjs,json,yml,md}\"",
+		"build-postinstall": "tsc --project tsconfig.install.json",
 		"build": "tsc",
-		"test": "NODE_OPTIONS='--loader=ts-node/esm' ava"
+		"test": "NODE_OPTIONS='--loader=ts-node/esm' mocha"
 	},
 	"keywords": [
 		"gif",
@@ -42,19 +44,23 @@
 	],
 	"type": "module",
 	"dependencies": {
+		"@lesjoursfr/bin-wrapper": "^12.0.1",
 		"execa": "^7.2.0",
-		"gifsicle": "^7.0.1",
-		"image-size": "^1.0.2"
+		"image-size": "^1.0.2",
+		"tar": "^6.1.15",
+		"tempy": "^3.1.0"
 	},
 	"devDependencies": {
 		"@tsconfig/node18": "^18.2.0",
-		"@types/gifsicle": "^5.2.0",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "^20.4.8",
+		"@types/tar": "^6.1.5",
 		"@typescript-eslint/eslint-plugin": "^6.2.1",
 		"@typescript-eslint/parser": "^6.2.1",
-		"ava": "^5.3.1",
 		"eslint": "^8.46.0",
-		"eslint-config-prettier": "^8.9.0",
-		"prettier": "^3.0.0",
+		"eslint-config-prettier": "^9.0.0",
+		"mocha": "^10.2.0",
+		"prettier": "^3.0.1",
 		"ts-node": "^10.9.1",
 		"typescript": "^5.1.6"
 	},

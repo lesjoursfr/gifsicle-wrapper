@@ -1,7 +1,7 @@
 import { execa } from "execa";
 import { writeFileSync } from "fs";
-import gifsicle from "gifsicle";
-import { Gifsicle, GifsicleInternalOptions } from "./gifsicle.js";
+import { Gifsicle, GifsicleInternalOptions } from "../gifsicle.js";
+import { gifsicleWrapper } from "../wrapper.js";
 import { computeCroppingPoint } from "./resize.js";
 
 async function processFile(input: Buffer, options: GifsicleInternalOptions) {
@@ -35,7 +35,7 @@ async function processFile(input: Buffer, options: GifsicleInternalOptions) {
     }
   }
 
-  const { stdout } = await execa(gifsicle, args, {
+  const { stdout } = await execa(gifsicleWrapper.path, args, {
     encoding: null,
     input,
   });

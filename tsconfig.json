@@ -9,6 +9,6 @@
 		"declaration": true,
 		"declarationDir": "lib"
 	},
-	"include": ["src/**/*"],
+	"include": ["src/index.ts", "src/@types/**/*"],
 	"exclude": ["node_modules", "**/*.spec.ts"]
 }

@@ -1,6 +1,11 @@
 # Generated files
 lib
 
+# Vendor files
+vendor/share
+vendor/gifsicle
+vendor/gifsicle.exe
+
 # Tests files
 *.gif
 !test.gif
