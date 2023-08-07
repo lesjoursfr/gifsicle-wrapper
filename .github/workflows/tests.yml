@@ -1,4 +1,4 @@
-name: QC Checks
+name: Tests
 
 on:
   push:
@@ -7,12 +7,13 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  tests:
     runs-on: ubuntu-latest
 
     strategy:
+      fail-fast: false
       matrix:
-        node-version: [20.x]
+        node-version: [18.x, 20.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -23,9 +24,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm install
-      - name: Check eslint errors
-        run: npm run check-lint
-      - name: Check format
-        run: npm run check-format
-      - name: Check TSC errors
-        run: npm run check-tsc
+      - name: Run tests
+        env:
+          NODE_OPTIONS: --loader=ts-node/esm
+        run: npx mocha
