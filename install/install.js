@@ -1,14 +1,18 @@
 import { execa } from "execa";
+import { mkdir, rm } from "fs/promises";
 import process from "process";
 import { x as extract } from "tar";
 import { temporaryFile } from "tempy";
 import { gifsicleSourcePath, gifsicleWrapper } from "./wrapper.js";
 async function buildFromSource(file, cmd) {
     const temporary = temporaryFile();
+    console.log(`use the temporary folder : ${temporary}`);
+    await mkdir(temporary, { recursive: true });
     await extract({ file: file, cwd: temporary, strip: 1 });
     for (const x of cmd) {
         await execa(x, { cwd: temporary, shell: true });
     }
+    await rm(temporary, { recursive: true });
 }
 (async () => {
     try {
