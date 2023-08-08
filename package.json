@@ -1,6 +1,6 @@
 {
 	"name": "gifsicle-wrapper",
-	"version": "4.0.1",
+	"version": "4.0.2",
 	"description": "Wrapper for Gifsicle",
 	"license": "MIT",
 	"repository": "lesjoursfr/gifsicle-wrapper",
