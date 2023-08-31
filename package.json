@@ -46,7 +46,7 @@
 	],
 	"type": "module",
 	"dependencies": {
-		"@lesjoursfr/bin-wrapper": "^12.0.2",
+		"@lesjoursfr/bin-wrapper": "^12.1.0",
 		"execa": "^8.0.1",
 		"image-size": "^1.0.2",
 		"tar": "^6.1.15",
