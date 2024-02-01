@@ -1,9 +1,12 @@
 {
-	"name": "gifsicle-wrapper",
+	"name": "@lesjoursfr/gifsicle-wrapper",
 	"version": "4.1.4",
 	"description": "Wrapper for Gifsicle",
 	"license": "MIT",
-	"repository": "lesjoursfr/gifsicle-wrapper",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lesjoursfr/gifsicle-wrapper.git"
+	},
 	"homepage": "https://github.com/lesjoursfr/gifsicle-wrapper#readme",
 	"bugs": {
 		"url": "https://github.com/lesjoursfr/gifsicle-wrapper/issues"

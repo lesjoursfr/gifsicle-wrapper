@@ -1,7 +1,7 @@
-[![NPM version](https://badge.fury.io/js/gifsicle-wrapper.svg)](http://badge.fury.io/js/gifsicle-wrapper)
+[![NPM version](https://badge.fury.io/js/@lesjoursfr%2Fgifsicle-wrapper.svg)](http://badge.fury.io/js/@lesjoursfr%2Fgifsicle-wrapper)
 [![QC Checks](https://github.com/lesjoursfr/gifsicle-wrapper/actions/workflows/quality-control.yml/badge.svg)](https://github.com/lesjoursfr/gifsicle-wrapper/actions/workflows/quality-control.yml)
 
-# gifsicle-wrapper
+# @lesjoursfr/gifsicle-wrapper
 
 [Gifsicle](https://www.lcdf.org/gifsicle/) wrapper
 
@@ -10,7 +10,7 @@
 Resize a Gif :
 
 ```javascript
-const Gifsicle = require("gifsicle-wrapper");
+const Gifsicle = require("@lesjoursfr/gifsicle-wrapper");
 
 (async () => {
 	await Gifsicle(path.join(__dirname, "test.gif"))
@@ -25,7 +25,7 @@ const Gifsicle = require("gifsicle-wrapper");
 Change colors to greyscale :
 
 ```javascript
-const Gifsicle = require("gifsicle-wrapper");
+const Gifsicle = require("@lesjoursfr/gifsicle-wrapper");
 
 (async () => {
 	await Gifsicle(path.join(__dirname, "test.gif"))
@@ -37,7 +37,7 @@ const Gifsicle = require("gifsicle-wrapper");
 Optimize the output :
 
 ```javascript
-const Gifsicle = require("gifsicle-wrapper");
+const Gifsicle = require("@lesjoursfr/gifsicle-wrapper");
 
 (async () => {
 	await Gifsicle(path.join(__dirname, "test.gif"))
