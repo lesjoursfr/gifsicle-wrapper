@@ -52,16 +52,16 @@
 		"@lesjoursfr/bin-wrapper": "^12.1.5",
 		"execa": "^8.0.1",
 		"image-size": "^1.1.1",
-		"tar": "^7.0.1",
+		"tar": "^7.1.0",
 		"tempy": "^3.1.0"
 	},
 	"devDependencies": {
 		"@tsconfig/node18": "^18.2.4",
 		"@types/mocha": "^10.0.6",
-		"@types/node": "^20.12.7",
+		"@types/node": "^20.12.11",
 		"@types/tar": "^6.1.13",
-		"@typescript-eslint/eslint-plugin": "^7.7.1",
-		"@typescript-eslint/parser": "^7.7.1",
+		"@typescript-eslint/eslint-plugin": "^7.8.0",
+		"@typescript-eslint/parser": "^7.8.0",
 		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
 		"mocha": "^10.4.0",
@@ -69,5 +69,5 @@
 		"ts-node": "^10.9.2",
 		"typescript": "^5.4.5"
 	},
-	"packageManager": "yarn@4.1.1"
+	"packageManager": "yarn@4.2.2"
 }
