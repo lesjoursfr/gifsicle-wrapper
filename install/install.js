@@ -10,7 +10,7 @@ async function buildFromSource(file, cmd) {
     await mkdir(temporary, { recursive: true });
     await extract({ file: file, cwd: temporary, strip: 1 });
     for (const x of cmd) {
-        await execa(x, { cwd: temporary, shell: true });
+        await execa(x, { cwd: temporary, shell: true, encoding: "utf8" });
     }
     await rm(temporary, { recursive: true });
 }

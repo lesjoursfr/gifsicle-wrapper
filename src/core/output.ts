@@ -36,7 +36,7 @@ async function processFile(input: Buffer, options: GifsicleInternalOptions) {
   }
 
   const { stdout } = await execa(gifsicleWrapper.path, args, {
-    encoding: null,
+    encoding: "buffer",
     input,
   });
 
