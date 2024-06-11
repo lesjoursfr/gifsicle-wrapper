@@ -4,7 +4,6 @@ import { Gifsicle } from "../gifsicle.js";
 /**
  * Reduction kernels.
  */
-/* eslint-disable no-unused-vars */
 export enum ReductionKernel {
   sample = "sample",
   mix = "mix",
@@ -13,12 +12,10 @@ export enum ReductionKernel {
   lanczos2 = "lanczos2",
   lanczos3 = "lanczos3",
 }
-/* eslint-enable no-unused-vars */
 
 /**
  * Position modes for cropping.
  */
-/* eslint-disable no-unused-vars */
 export enum CroppingPosition {
   center = "center",
   top = "top",
@@ -30,7 +27,6 @@ export enum CroppingPosition {
   bottomLeft = "bottomLeft",
   topLeft = "topLeft",
 }
-/* eslint-enable no-unused-vars */
 
 /**
  * Resize options.

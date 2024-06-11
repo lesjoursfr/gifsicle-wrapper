@@ -3,13 +3,11 @@ import { Gifsicle } from "../gifsicle.js";
 /**
  * Optimization levels.
  */
-/* eslint-disable no-unused-vars */
 export enum OptimizationLevel {
   O1 = "O1",
   O2 = "O2",
   O3 = "O3",
 }
-/* eslint-enable no-unused-vars */
 
 /**
  * Optimization options.
