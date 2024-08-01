@@ -9,7 +9,10 @@ export default tseslint.config(
   {
     languageOptions: {
       parserOptions: {
-        projectService: true,
+        projectService: {
+          allowDefaultProject: ["src/install.ts"],
+          defaultProject: "tsconfig.install.json",
+        },
         tsconfigRootDir: import.meta.dirname,
         ecmaVersion: 2022,
         globals: {
@@ -23,6 +26,8 @@ export default tseslint.config(
   {
     ignores: [
       "package.json",
+      "eslint.config.mjs",
+      "prettier.config.mjs",
       "node_modules/*",
       ".yarn/*",
       "lib/*",
