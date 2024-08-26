@@ -50,7 +50,7 @@
 	"type": "module",
 	"dependencies": {
 		"@lesjoursfr/bin-wrapper": "^12.1.6",
-		"execa": "^9.3.0",
+		"execa": "^9.3.1",
 		"image-size": "^1.1.1",
 		"tar": "^7.4.3",
 		"tempy": "^3.1.0"
@@ -59,7 +59,7 @@
 		"@eslint/js": "^9.9.0",
 		"@tsconfig/node20": "^20.1.4",
 		"@types/mocha": "^10.0.7",
-		"@types/node": "^20.14.15",
+		"@types/node": "^20.16.1",
 		"@types/tar": "^6.1.13",
 		"eslint": "^9.9.0",
 		"eslint-config-prettier": "^9.1.0",
@@ -68,7 +68,7 @@
 		"prettier": "^3.3.3",
 		"ts-node": "^10.9.2",
 		"typescript": "^5.5.4",
-		"typescript-eslint": "^8.1.0"
+		"typescript-eslint": "^8.2.0"
 	},
 	"packageManager": "yarn@4.4.0"
 }
