@@ -48,15 +48,15 @@ async function processFile(input: Buffer, options: GifsicleInternalOptions) {
  *
  * @param {String} [fileOut]
  */
-export async function toFile(this: Gifsicle, fileOut: string) {
+export async function toFile(this: Gifsicle, fileOut: string): Promise<void> {
   writeFileSync(fileOut, await processFile(this.input, this.options));
 }
 
 /**
  * Get the result file as a Buffer.
  *
- * @returns {Buffer}
+ * @returns {Uint8Array}
  */
-export async function toBuffer(this: Gifsicle) {
+export async function toBuffer(this: Gifsicle): Promise<Uint8Array> {
   return processFile(this.input, this.options);
 }
