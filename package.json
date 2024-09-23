@@ -56,12 +56,12 @@
 		"tempy": "^3.1.0"
 	},
 	"devDependencies": {
-		"@eslint/js": "^9.10.0",
+		"@eslint/js": "^9.11.0",
 		"@tsconfig/node20": "^20.1.4",
 		"@types/mocha": "^10.0.8",
 		"@types/node": "^22.5.5",
 		"@types/tar": "^6.1.13",
-		"eslint": "^9.10.0",
+		"eslint": "^9.11.0",
 		"eslint-config-prettier": "^9.1.0",
 		"globals": "^15.9.0",
 		"mocha": "^10.7.3",
