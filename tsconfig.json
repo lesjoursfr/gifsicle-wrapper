@@ -4,8 +4,6 @@
 		/* Visit https://aka.ms/tsconfig.json to read more about this file */
 		"outDir": "lib",
 		"rootDir": "src",
-		"module": "ES2022",
-		"moduleResolution": "node",
 		"declaration": true,
 		"declarationDir": "lib"
 	},

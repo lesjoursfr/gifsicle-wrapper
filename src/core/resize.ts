@@ -1,4 +1,4 @@
-import sizeOf from "image-size";
+import { imageSize } from "image-size";
 import { Gifsicle } from "../gifsicle.js";
 
 /**
@@ -129,7 +129,7 @@ export function computeCroppingPoint(
   input: Buffer,
   crop: { width: number; height: number; position: CroppingPosition }
 ): { x: number; y: number } {
-  const size = sizeOf(input);
+  const size = imageSize(input);
   if (size.width === undefined || size.height === undefined) {
     throw new Error("Can't compute the image size");
   }
