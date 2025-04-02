@@ -1,6 +1,6 @@
 {
 	"name": "@lesjoursfr/gifsicle-wrapper",
-	"version": "4.1.8",
+	"version": "4.1.9",
 	"description": "Wrapper for Gifsicle",
 	"license": "MIT",
 	"repository": {
@@ -49,7 +49,7 @@
 	],
 	"type": "module",
 	"dependencies": {
-		"@lesjoursfr/bin-wrapper": "^12.1.9",
+		"@lesjoursfr/bin-wrapper": "^12.1.10",
 		"execa": "^9.5.2",
 		"image-size": "^2.0.1",
 		"tar": "^7.4.3",
