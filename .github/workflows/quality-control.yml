@@ -17,15 +17,21 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
+
+      - run: corepack enable
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+
       - name: Install dependencies
         run: npm install
+
       - name: Check eslint errors
         run: npm run check-lint
+
       - name: Check format
         run: npm run check-format
+
       - name: Check TSC errors
         run: npm run check-tsc
