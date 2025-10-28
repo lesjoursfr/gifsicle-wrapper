@@ -15,7 +15,7 @@
 		"access": "public"
 	},
 	"engines": {
-		"node": "20.x || 22.x || 24.x"
+		"node": "22.x || 24.x"
 	},
 	"exports": "./lib/index.js",
 	"types": "./lib/index.d.ts",
@@ -49,7 +49,7 @@
 	],
 	"type": "module",
 	"dependencies": {
-		"@lesjoursfr/bin-wrapper": "^12.1.11",
+		"@lesjoursfr/bin-wrapper": "^13.0.0",
 		"execa": "^9.6.0",
 		"image-size": "^2.0.2",
 		"tar": "^7.5.1",
@@ -57,9 +57,9 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.38.0",
-		"@tsconfig/node20": "^20.1.6",
+		"@tsconfig/node22": "^22.0.2",
 		"@types/mocha": "^10.0.10",
-		"@types/node": "^22.18.12",
+		"@types/node": "^24.9.2",
 		"@types/tar": "^6.1.13",
 		"eslint": "^9.38.0",
 		"eslint-config-prettier": "^10.1.8",
