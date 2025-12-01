@@ -49,8 +49,8 @@
 	],
 	"type": "module",
 	"dependencies": {
-		"@lesjoursfr/bin-wrapper": "^13.0.1",
-		"execa": "^9.6.0",
+		"@lesjoursfr/bin-wrapper": "^13.0.2",
+		"execa": "^9.6.1",
 		"image-size": "^2.0.2",
 		"tar": "^7.5.2",
 		"tempy": "^3.1.0"
@@ -65,7 +65,7 @@
 		"eslint-config-prettier": "^10.1.8",
 		"globals": "^16.5.0",
 		"mocha": "^11.7.5",
-		"prettier": "^3.7.1",
+		"prettier": "^3.7.3",
 		"ts-node": "^10.9.2",
 		"typescript": "^5.9.3",
 		"typescript-eslint": "^8.48.0"
