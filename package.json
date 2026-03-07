@@ -52,7 +52,7 @@
 		"@lesjoursfr/bin-wrapper": "^13.0.6",
 		"execa": "^9.6.1",
 		"image-size": "^2.0.2",
-		"tar": "^7.5.9",
+		"tar": "^7.5.10",
 		"tempy": "^3.2.0"
 	},
 	"devDependencies": {
