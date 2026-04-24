@@ -21,7 +21,7 @@
 	"types": "./lib/index.d.ts",
 	"files": [
 		"install/**/*",
-		"vendor/v1.94/source/gifsicle.tar.gz",
+		"vendor/v1.96/source/gifsicle.tar.gz",
 		"lib/**/*",
 		"src/**/*"
 	],
