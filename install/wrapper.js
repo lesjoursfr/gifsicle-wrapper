@@ -1,7 +1,7 @@
 import BinWrapper from "@lesjoursfr/bin-wrapper";
 import { platform } from "process";
 import { fileURLToPath } from "url";
-const version = "1.94";
+const version = "1.96";
 const base = `https://raw.githubusercontent.com/lesjoursfr/gifsicle-wrapper/main/vendor/v${version}`;
 export const gifsicleWrapper = new BinWrapper({ strip: 0 });
 gifsicleWrapper.addSrc(`${base}/linux/x64/gifsicle.tar.gz`, "linux", "x64");
