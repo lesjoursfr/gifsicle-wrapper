@@ -17,14 +17,19 @@
 	"engines": {
 		"node": "22.x || 24.x"
 	},
-	"exports": "./lib/index.js",
-	"types": "./lib/index.d.ts",
-	"files": [
-		"install/**/*",
-		"vendor/v1.96/source/gifsicle.tar.gz",
-		"lib/**/*",
-		"src/**/*"
+	"keywords": [
+		"gif",
+		"gifsicle",
+		"image",
+		"img",
+		"compress",
+		"resize",
+		"minify",
+		"optimize"
 	],
+	"main": "./lib/index.js",
+	"types": "./lib/index.d.ts",
+	"type": "module",
 	"scripts": {
 		"freshlock": "rm -rf node_modules/ && rm .yarn/install-state.gz && rm yarn.lock && yarn",
 		"postinstall": "node install/install.js",
@@ -37,19 +42,8 @@
 		"build": "tsc",
 		"test": "NODE_OPTIONS='--loader=ts-node/esm' mocha"
 	},
-	"keywords": [
-		"gif",
-		"gifsicle",
-		"image",
-		"img",
-		"compress",
-		"resize",
-		"minify",
-		"optimize"
-	],
-	"type": "module",
 	"dependencies": {
-		"@lesjoursfr/bin-wrapper": "^13.1.0",
+		"@lesjoursfr/bin-wrapper": "^13.1.1",
 		"execa": "^9.6.1",
 		"image-size": "^2.0.2",
 		"tar": "^7.5.13",
