@@ -46,22 +46,22 @@
 		"@lesjoursfr/bin-wrapper": "^13.1.1",
 		"execa": "^9.6.1",
 		"image-size": "^2.0.2",
-		"tar": "^7.5.13",
+		"tar": "^7.5.15",
 		"tempy": "^3.2.0"
 	},
 	"devDependencies": {
 		"@eslint/js": "10.0.1",
 		"@tsconfig/node22": "22.0.5",
 		"@types/mocha": "10.0.10",
-		"@types/node": "24.12.2",
-		"eslint": "10.2.1",
+		"@types/node": "24.12.4",
+		"eslint": "10.3.0",
 		"eslint-config-prettier": "10.1.8",
-		"globals": "17.5.0",
+		"globals": "17.6.0",
 		"mocha": "11.7.5",
 		"prettier": "3.8.3",
 		"ts-node": "10.9.2",
 		"typescript": "6.0.3",
-		"typescript-eslint": "8.59.0"
+		"typescript-eslint": "8.59.3"
 	},
 	"packageManager": "yarn@4.14.1"
 }
