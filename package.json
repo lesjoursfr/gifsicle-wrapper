@@ -1,6 +1,6 @@
 {
 	"name": "@lesjoursfr/gifsicle-wrapper",
-	"version": "6.0.2",
+	"version": "6.0.3",
 	"description": "Wrapper for Gifsicle",
 	"license": "MIT",
 	"repository": {
@@ -43,7 +43,7 @@
 		"test": "NODE_OPTIONS='--loader=ts-node/esm' mocha"
 	},
 	"dependencies": {
-		"@lesjoursfr/bin-wrapper": "^13.1.2",
+		"@lesjoursfr/bin-wrapper": "^13.1.3",
 		"execa": "^10.0.1",
 		"image-size": "^2.0.4",
 		"tar": "^7.5.22",
